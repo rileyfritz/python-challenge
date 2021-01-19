@@ -1,15 +1,13 @@
-# First we'll import the os module
-# This will allow us to create file paths across operating systems
 import os
-
-# Module for reading CSV files
 import csv
 
 # Specify the file to write to
-output_path = os.path.join("Analysis", "new.txt")
+output_path = os.path.join("Analysis", "Profits&Losses_Summary.txt")
+
+# specify file to read from
+csvpath = os.path.join('Resources', 'budget_data.csv')
 
 # Define variables
-csvpath = os.path.join('Resources', 'budget_data.csv')
 month_count = 0
 pl_total = 0
 first_month_PL = 0
@@ -70,6 +68,7 @@ print(f'Average Change: ${round(average_change,0)}')
 print(f'Greatest Profit Increase: {maxProfitMonth}: ${maxProfit}')
 print(f'Greatest Profit Decrease: {maxLossMonth}: ${maxLoss}')
 
+# write to txt file
 with open(output_path, 'w') as writer:
     writer.write('Financial Analysis')
     writer.write('\n')
