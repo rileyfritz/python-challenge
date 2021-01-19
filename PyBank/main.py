@@ -5,6 +5,9 @@ import os
 # Module for reading CSV files
 import csv
 
+# Specify the file to write to
+output_path = os.path.join("Analysis", "new.txt")
+
 # Define variables
 csvpath = os.path.join('Resources', 'budget_data.csv')
 month_count = 0
@@ -66,3 +69,18 @@ print(f'Total: ${round(pl_total,0)}')
 print(f'Average Change: ${round(average_change,0)}')
 print(f'Greatest Profit Increase: {maxProfitMonth}: ${maxProfit}')
 print(f'Greatest Profit Decrease: {maxLossMonth}: ${maxLoss}')
+
+with open(output_path, 'w') as writer:
+    writer.write('Financial Analysis')
+    writer.write('\n')
+    writer.write('-------------------')
+    writer.write('\n')
+    writer.write(f'Total Months: {month_count}')
+    writer.write('\n')
+    writer.write(f'Total: ${round(pl_total,0)}')
+    writer.write('\n')
+    writer.write(f'Average Change: ${round(average_change,0)}')
+    writer.write('\n')
+    writer.write(f'Greatest Profit Increase: {maxProfitMonth}: ${maxProfit}')
+    writer.write('\n')
+    writer.write(f'Greatest Profit Decrease: {maxLossMonth}: ${maxLoss}')
