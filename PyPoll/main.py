@@ -54,7 +54,8 @@ with open(csvpath) as csvfile:
         
     # Print winner
     print(f'{winning_candidate} is the winner!')
-    
+
+# Write to txt file
 with open(output_path, 'w') as txtfile:
 
     #print vote count

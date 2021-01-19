@@ -19,7 +19,7 @@ maxProfitMonth = ""
 maxLoss = 0
 maxLossMonth = ""
 
-
+# open data file to read from
 with open(csvpath) as csvfile:
 
     # CSV reader specifies delimiter and variable that holds contents
