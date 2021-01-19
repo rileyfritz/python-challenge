@@ -1,4 +1,4 @@
-# Testing a git add, commit, push, again!
+# Testing a git add, commit, push!
 
 # python-challenge
 
